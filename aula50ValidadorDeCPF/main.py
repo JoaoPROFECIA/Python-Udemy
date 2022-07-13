@@ -25,7 +25,9 @@ def validador_de_cpf(cpf):
                 total = 0
                 novo_cpf += str(diferenca)
 
-        if novo_cpf == cpf: 
+        sequencia = novo_cpf == str(novo_cpf[0]) * 11
+
+        if novo_cpf == cpf and not sequencia: 
             print('CPF VÁLIDO')
             sleep(1)
         else:
