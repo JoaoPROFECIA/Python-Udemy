@@ -20,7 +20,7 @@ Exercicios propostos
 1 - Criar uma função que exiba o nome do usuário e a mensagem "Olá, [nome]!"
 """
 def saudacao(saudacao, nome):
-    print(f'saudacao' 'nome')
+    print(f'{saudacao} {nome}')
 
 saudacao('Olá', 'João')	
 saudacao('Oi', 'Maria')
@@ -33,10 +33,9 @@ saudacao('Hey', 'Eduardo')
 dos mesmos
 """
 def soma(n1, n2, n3):
-    return n1 + n2 + n3
+    print(n1 + n2 + n3)
 
-soma = soma(1, 2, 3)
-print(soma)
+soma(1, 2, 3)
 
 
 """
@@ -45,11 +44,11 @@ print(soma)
 Retorne (return) o valor do primeiro número somado ao aumento do percetual 
 do mesmo
 """
-def percentual(n1, n2):
-    return n1 * n2 / 100
+def aumento_percentual(n1, n2):
+    return n1 + (n1 * n2 / 100)
 
-porcentagem = percentual(10, 5)
-print(porcentagem)
+ap = aumento_percentual(50, 10)
+print(ap)
 
 
 """
@@ -57,16 +56,16 @@ print(porcentagem)
 divisível por 5, 
 retorne Buzz, se for divisível por 3 e 5, retorne FizzBuzz.
 """
-def fizzbuzz(n1):
-    n1 = int(input("Digite um número: "))
-    if n1 % 3 == 0 and n1 % 5 == 0:
-        return "FizzBuzz"
-    elif n1 % 3 == 0:
-        return "Fizz"
-    elif n1 % 5 == 0:
-        return "Buzz"
-    else:
-        return n1
-    
-fizzbuzz = fizzbuzz(15)
-print(fizzbuzz)
+def fizzbuzz(n):
+    if n % 3 == 0 and n % 5 == 0:
+        return f"FizzBuzz, {n} é divisivel por 3 e 5"
+    if n % 3 == 0:
+        return f"Fizz, {n} é divisivel por 3"
+    if n % 5 == 0:
+        return f"Buzz, {n} é divisivel por 5"
+    return n
+
+from random import randint
+for i in range(100):
+    n = randint(1, 100)
+    print(fizzbuzz(n))
