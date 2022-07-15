@@ -19,12 +19,13 @@ Exercicios propostos
 """
 1 - Criar uma função que exiba o nome do usuário e a mensagem "Olá, [nome]!"
 """
-def saldacao(nome):
-    nome = str(input("Digite seu nome: "))
-    return "Olá, " + nome
+def saudacao(saudacao, nome):
+    print(f'saudacao' 'nome')
 
-saldar = saldacao(nome='')
-print(saldar)
+saudacao('Olá', 'João')	
+saudacao('Oi', 'Maria')
+saudacao('Hey', 'Eduardo')
+
 
 
 """
