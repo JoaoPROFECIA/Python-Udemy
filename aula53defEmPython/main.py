@@ -57,15 +57,18 @@ divisível por 5,
 retorne Buzz, se for divisível por 3 e 5, retorne FizzBuzz.
 """
 def fizzbuzz(n):
+    if n==0:
+        return ZeroDivisionError (f"{n} Não é possível dividir por zero!")
     if n % 3 == 0 and n % 5 == 0:
         return f"FizzBuzz, {n} é divisivel por 3 e 5"
     if n % 3 == 0:
         return f"Fizz, {n} é divisivel por 3"
     if n % 5 == 0:
         return f"Buzz, {n} é divisivel por 5"
+    
     return n
 
 from random import randint
 for i in range(100):
-    n = randint(1, 100)
+    n = randint(0, 100)
     print(fizzbuzz(n))
